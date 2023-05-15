@@ -1,10 +1,11 @@
 .cart {
   position: absolute;
   top: 70px;
-  right: 0;
+  right: 16px;
   min-height: 20vh;
   max-height: 80vh;
-  width: 40%;
+  min-width: 300px;
+  max-width: 40%;
   background-color: white;
   border: 1px solid black;
   padding: 30px 10px;
@@ -27,9 +28,11 @@
 }
 
 .cartItem {
+  min-width: 210px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   position: relative;
   border: 1px solid black;
   border-radius: 10px;
@@ -37,15 +40,19 @@
   padding: 10px;
 }
 
+.cartImgContainer {
+  width: 170px;
+  height: 130px;
+}
+
 .cart img {
-  width: 30%;
-  height: 30%;
+  height: 100%;
 }
 
 .deleteBtn {
   color: red;
   position: absolute;
-  bottom: 5px;
+  bottom: -5px;
   right: 15px;
 }
 
