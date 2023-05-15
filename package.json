@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "main": "src/index.js",
-  "homepage": "https://vladislavtu.github.io/store-v1", 
+  "main": "src/index.js", 
   "dependencies": {
     "loader-utils": "3.2.1",
     "react": "18.2.0",
