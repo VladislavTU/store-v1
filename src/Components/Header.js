@@ -33,7 +33,7 @@ function Header({ cartOpen, onCart, items, deleteFromCart, cartState }) {
                   Contacts
                 </NavLink>
                 <NavLink to="account" className={styles.headerMenuItem}>
-                  Account
+                  User
                 </NavLink>
               </nav>
             </div>
