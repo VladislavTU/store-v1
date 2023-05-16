@@ -1,3 +1,4 @@
+import Slider from './Slider';
 import styles from './aboutUs.module.css';
 
 const AboutUs = () => {
@@ -19,7 +20,7 @@ const AboutUs = () => {
           Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
           facilisis luctus, metus
         </p>
-        <div>Maybe slider?</div>
+        <Slider />
       </div>
     </div>
   );
