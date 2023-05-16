@@ -20,8 +20,8 @@ const AboutUs = () => {
           Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
           facilisis luctus, metus
         </p>
-        <Slider />
       </div>
+      <Slider />
     </div>
   );
 };

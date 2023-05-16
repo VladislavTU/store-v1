@@ -1,0 +1,28 @@
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+  height: 400px;
+  overflow: hidden;
+}
+
+.sliderItemsList {
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+
+.sliderItem {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderItem img {
+  width: 100%;
+}
