@@ -4,9 +4,14 @@
     align-items: center;
 }
 
+.sliderArrows {
+
+}
+
 .window {
   height: 400px;
   overflow: hidden;
+  width: 33%;
 }
 
 .sliderItemsList {
@@ -25,4 +30,5 @@
 
 .sliderItem img {
   width: 100%;
+  user-select: none;
 }
