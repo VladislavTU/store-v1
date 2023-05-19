@@ -2,22 +2,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+}
+
+.arrowContainer {
+  width: 10%;
 }
 
 .sliderArrows {
+  color: lightgrey;
+  padding: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+}
 
+.sliderArrows:hover {
+  color: white;
+  background-color: lightgrey;
 }
 
 .window {
-  height: 400px;
+  height: 30%;
   overflow: hidden;
   width: 33%;
+  background-color: white;
 }
 
 .sliderItemsList {
-    height: 400px;
+    height: 30%;
     width: 100%;
     display: flex;
+    gap: 1%;
 }
 
 .sliderItem {

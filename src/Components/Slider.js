@@ -7,19 +7,23 @@ const Slider = () => {
   const [move, setMove] = useState(0);
   const trans = { transform: `translateX(${move}%)` };
   const setMoveLeftHandler = () => {
-    setMove(move + 100);
+    setMove(move + 101);
   };
   const setMoveRightHandler = () => {
-    setMove(move - 100);
+    setMove(move - 101);
   };
   return (
     <div className="container">
       <div className={styles.slider}>
-        {move < 0 && <AiOutlineArrowLeft
-          className={styles.sliderArrows}
-          size={30}
-          onClick={setMoveLeftHandler}
-        />}
+        <div className={styles.arrowContainer}>
+          {move < 0 && (
+            <AiOutlineArrowLeft
+              className={styles.sliderArrows}
+              size="30%"
+              onClick={setMoveLeftHandler}
+            />
+          )}
+        </div>
         <div className={styles.window}>
           <div className={styles.sliderItemsList} style={trans}>
             {itemsList.map((el) => {
@@ -31,11 +35,15 @@ const Slider = () => {
             })}
           </div>
         </div>
-        {-move < ((itemsList.length - 1) * 100) && <AiOutlineArrowRight
-          className={styles.sliderArrows}
-          size={30}
-          onClick={setMoveRightHandler}
-        />}
+        <div className={styles.arrowContainer}>
+          {-move < (itemsList.length - 1) * 101 && (
+            <AiOutlineArrowRight
+              className={styles.sliderArrows}
+              size="30%"
+              onClick={setMoveRightHandler}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
