@@ -1,6 +1,8 @@
 .formContainer {
   display: flex;
   justify-content: center;
+  height: 51vh;
+  align-items: center;
 }
 
 .aboutForm {
@@ -12,9 +14,29 @@
   flex-direction: column;
   gap: 15px;
   align-items: center;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.aboutForm input,
+.aboutForm textarea,
+.aboutForm button {
+  font-size: 18px;
 }
 
 .aboutForm textarea {
   width: 100%;
+}
+
+.aboutForm button {
+  padding: 5px 10px;
+  align-self: center;
+  color: white;
+  background-color: rgb(33, 150, 243);
+  border-radius: 5px;
+  border: 1px solid rgb(33, 150, 243);
+}
+
+.aboutForm button:hover {
+  background-color: #008bff;
 }

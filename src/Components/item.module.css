@@ -37,19 +37,21 @@
   align-self: flex-start;
   margin-right: 20px;
   padding: 3px;
-  color: red;
+  color: rgb(33, 150, 243);
   font-weight: bold;
 }
 
 .addCartBtn {
-  color: orangered;
-  border: 1px solid orangered;
+  color: white;
+  border: 1px solid rgb(33, 150, 243);
+  background-color: rgb(33, 150, 243);
   padding: 5px;
+  border-radius: 5px;
 }
 
 .addCartBtn:hover {
   color: white;
-  background-color: red;
+  background-color: #0477d6;
   cursor: pointer;
   transition: 0.2s;
 }
