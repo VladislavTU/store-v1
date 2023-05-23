@@ -2,7 +2,7 @@ import ItemsList from './Components/ItemsList';
 import itemsList from './items/items';
 import './styles.css';
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import AboutUs from './Components/AboutUs';
 import Contacts from './Components/Contacts';
@@ -26,7 +26,7 @@ export default function App() {
     setOnCart(onCart.filter((el) => el.id !== index));
   };
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route
@@ -56,6 +56,6 @@ export default function App() {
           </Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
