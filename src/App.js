@@ -26,7 +26,7 @@ export default function App() {
     setOnCart(onCart.filter((el) => el.id !== index));
   };
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="App">
         <Routes>
           <Route
@@ -56,6 +56,6 @@ export default function App() {
           </Route>
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
