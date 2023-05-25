@@ -11,6 +11,7 @@
 }
 
 .headerTop {
+  min-width: 420px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -82,4 +83,13 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 500px) {
+  .logo {
+    display: none;
+  }
+  .headerTop {
+    justify-content: center;
+  }
 }

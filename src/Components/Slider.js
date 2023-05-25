@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import itemsList from '../items/items';
 import styles from './slider.module.css';
+import avatars from '../items/avatars';
 
 const Slider = () => {
   const [move, setMove] = useState(0);
@@ -26,17 +27,17 @@ const Slider = () => {
         </div>
         <div className={styles.window}>
           <div className={styles.sliderItemsList} style={trans}>
-            {itemsList.map((el) => {
+            {avatars.map((el) => {
               return (
                 <div key={el.id} className={styles.sliderItem}>
-                  <img src={el.url} alt={el.name} />
+                  <img src={el.url} alt='avatar' />
                 </div>
               );
             })}
           </div>
         </div>
         <div className={styles.arrowContainer}>
-          {-move < (itemsList.length - 1) * 101 && (
+          {-move < (itemsList.length) * 101 && (
             <AiOutlineArrowRight
               className={styles.sliderArrows}
               size="30%"

@@ -14,3 +14,16 @@
 .about p {
   width: 45%;
 }
+
+@media(max-width:700px) {
+  .about {
+    flex-direction: column;
+  }
+  .about img {
+    width: 80%;
+  }
+  
+  .about p {
+    width: 80%;
+  }
+}
