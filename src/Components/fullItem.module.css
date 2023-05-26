@@ -1,9 +1,9 @@
 .fullItem {
   display: grid;
   grid-template-areas:
-    'A A'
-    'B C'
-    '. D';
+    "A A"
+    "B C"
+    ". D";
   gap: 5px;
   align-items: center;
 }
@@ -14,13 +14,51 @@
 
 .fullItemImg {
   grid-area: B;
-  width: 300px;
+  max-width: 300px;
 }
 
 .fullItemDescription {
   grid-area: C;
 }
 
-.fullItemPrice {
+.fullItemPriceAndButton {
   grid-area: D;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fullItemAddCartBtn {
+  color: white;
+  border: 1px solid rgb(33, 150, 243);
+  background-color: rgb(33, 150, 243);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.fullItemAddCartBtn:hover {
+  color: white;
+  background-color: #0477d6;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fullItemPrice {
+  color: rgb(33, 150, 243);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .fullItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .fullItemPriceAndButton {
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .fullItemImg {
+    width: 100%;
+  }
 }
