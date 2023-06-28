@@ -1,11 +1,11 @@
 import Item from './Item';
 import styles from './ItemsList.module.css';
 
-function ItemsList({ items, addOnCart }) {
+function ItemsList({ products, addOnCart }) {
   return (
     <div className="container">
       <div className={styles.items}>
-        <Item items={items} addOnCart={addOnCart} />
+        <Item products={products} addOnCart={addOnCart} />
       </div>
     </div>
   );
