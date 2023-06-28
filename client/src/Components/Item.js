@@ -1,29 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from './item.module.css';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 
-function Item({ addOnCart }) {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          process.env.REACT_APP_API_URL + '/products?populate=*',
-          {
-            headers: {
-              Authorization: 'bearer ' + process.env.REACT_APP_API_TOKEN,
-            },
-          }
-        );
-        console.log(res.data.data);
-        setProducts(res.data.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+
+function Item({ products, addOnCart }) {
+
 
   return products.map((el) => (
     <div className={styles.item} key={el?.id}>

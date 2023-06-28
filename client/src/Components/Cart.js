@@ -10,13 +10,14 @@ function Cart({ cartOpen, onCartItems, deleteFromCart }) {
         onClick={() => cartOpen()}
       />
       {onCartItems.map((el) => (
-        <div className={styles.cartItem} key={el.id}>
+        <div className={styles.cartItem} key={el?.id}>
           <div className={styles.cartImgContainer}>
-            <img src={el.url} alt="Item" />
+            <img src={process.env.REACT_APP_UPLOAD_URL +
+              el?.attributes.img.data.attributes.url} alt="Item" />
           </div>
-          <h4>{el.name}</h4>
-          <p className={styles.itemPrice}>{el.price}$</p>
-          <p className={styles.deleteBtn} onClick={() => deleteFromCart(el.id)}>
+          <h4>{el?.attributes.title}</h4>
+          <p className={styles.itemPrice}>{el?.attributes.price}$</p>
+          <p className={styles.deleteBtn} onClick={() => deleteFromCart(el?.id)}>
             Delete
           </p>
         </div>
@@ -24,7 +25,7 @@ function Cart({ cartOpen, onCartItems, deleteFromCart }) {
       {!!onCartItems.length && (
         <p className={styles.totalPrice}>
           Total price:{" "}
-          {onCartItems.reduce((accum, item) => accum + item.price, 0)}$
+          {onCartItems.reduce((accum, el) => accum + el?.attributes.price, 0)}$
         </p>
       )}
     </div>

@@ -4,7 +4,7 @@ import styles from './header.module.css';
 import { Link, NavLink } from 'react-router-dom';
 import Cart from './Cart';
 
-function Header({ cartOpen, onCart, items, deleteFromCart, cartState }) {
+function Header({ cartOpen, onCart, products, deleteFromCart, cartState }) {
   return (
     <div className={styles.header}>
       <div className={styles.headerUpper}>
@@ -42,7 +42,6 @@ function Header({ cartOpen, onCart, items, deleteFromCart, cartState }) {
         {cartState && (
           <Cart
             cartOpen={cartOpen}
-            items={items}
             onCartItems={onCart}
             deleteFromCart={deleteFromCart}
           />
