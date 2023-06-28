@@ -71,11 +71,11 @@ export default function App() {
             <Route path="about" element={<AboutUs />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="account" element={<Account />} />
-            <Route
+            {/* <Route
               path="fullItem"
               element={<FullItem items={itemsList} addOnCart={onCartHandler} />}
-            />
-            <Route path="/:name" element={<FullItem items={itemsList} addOnCart={onCartHandler} />} />
+            /> */}
+            <Route path="/:name" element={<FullItem products={products} items={itemsList} addOnCart={onCartHandler} />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
